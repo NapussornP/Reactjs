@@ -22,6 +22,7 @@ import Napussorn from './component/Root/Napussorn';
 import FalsePosition1 from './component/Root/FalsePosition1';
 import Cramer from './LinearAlgebraric/Cramer';
 import GaussElimination from './LinearAlgebraric/GaussElimination';
+import GaussJordan from './LinearAlgebraric/GaussJordan';
 
 
 class App extends Component{
@@ -44,6 +45,7 @@ class App extends Component{
             <Route path='/Napussorn' element={<Napussorn/>}/>
             <Route path='/CramerRule' element={<Cramer/>}/>
             <Route path='/GuassElimination' element = {<GaussElimination/>}/>
+            <Route path='/Guass-Jordan' element ={<GaussJordan/>}/>
            
           </Routes>
           </BrowserRouter>

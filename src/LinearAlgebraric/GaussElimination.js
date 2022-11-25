@@ -52,16 +52,15 @@ function GaussElimination() {
       }
       //setmatrix a|b
       for(let j=0 ; j<=size ; j++){
-        //console.log(Number(document.getElementById('column'+j+'row'+j).value))
+        
           calmatrix[i].push(Number(document.getElementById('column'+i+'row'+j).value))
       }
     }
-    //console.log(tmpa)
+    
     let roundtri = 1
     let matrixA = calmatrix.map(a=>a.slice()) 
     let tempa = calmatrix.map(a=>a.slice()) //line of deep clone array
-    //calculator
-    //Forward Elimination
+    
     for(let i=0 ; i<=size ; i++){
       for(let j=i+1 ; j<size ; j++){
         let temp = tempa[j][i]/tempa[i][i]  
@@ -71,7 +70,6 @@ function GaussElimination() {
         }
         
         
-        //pick up step do triangle 0 down-left
           calmatrix[i] = tempa
           let tmpstep = []
           for(let a=0; a<size ; a++){
@@ -91,33 +89,29 @@ function GaussElimination() {
       arrans[i] = tempa[i-1][size]
       for(let j=i+1 ; j<=size ; j++){
         let tempind = tempa[i-1][j-1]*arrans[j]
-        //console.log(tempind)
+        
         arrans[i] = arrans[i]-tempind
-        //console.log(arrans)
+        
       }
       arrans[i] = arrans[i]/tempa[i-1][i-1]
     }
-    //console.log(calmatrix)
-    //console.log(arrans)
-
-    //ans(size) = size because ans(size) > size
+    
     let ind = 0
     let listans = []
     for(let i=1 ; i<=size ; i++){
       listans[ind] = arrans[i].toFixed(2)
       ind++
     }
-    //console.log(listans)
-    console.log(tmpa)
-    let checkans = math.multiply(tmpa, listans)
-    console.log(checkans)
+  
+  
+    
 
     //output on page
     let ans = []
     for(let i=1 ; i<arrans.length ; i++){
       ans.push(<div>x{i}={arrans[i].toFixed(6)}</div>)
     }
-    setmatrix({a:matrix.a,b:ans,c:calmatrix,d:calstep,e:matrixA,f:tempb,g:listans,z:checkans})
+    setmatrix({a:matrix.a,b:ans,c:calmatrix,d:calstep,e:matrixA,f:tempb,g:listans})
   }
 
 
@@ -157,31 +151,7 @@ function GaussElimination() {
         }<br/>
       </div>
       <br/><br/>
-      <div>
-        Checkresult
-        <div>
-          <br/>
-        </div>
-        <div className='matrix f'>
-          Matrix A : {" "}
-          {
-            matrix.e+""
-          }
-        </div><br/>
-        <div className='matrix f'>
-        Matrix X : {" "}
-          {
-            matrix.g+""
-          }
-        </div><br/>
-        <div className='matrix f'>
-          Result : {" "}
-          {
-            matrix.z+""
-          }
-        </div>
-        <br/>
-      </div>
+      
     </div>
   )
 }
