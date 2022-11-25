@@ -19,8 +19,9 @@ import OnePoint from './component/Root/OnePoint';
 import NewtonRaphson1 from './component/Root/NewtonRaphson1';
 import Secant1 from './component/Root/Secant1';
 import Napussorn from './component/Root/Napussorn';
-import GaussElimination from './LinearAlgebraric/GuassEliminaton';
 import FalsePosition1 from './component/Root/FalsePosition1';
+import Cramer from './LinearAlgebraric/Cramer';
+import GaussElimination from './LinearAlgebraric/GaussElimination';
 
 
 class App extends Component{
@@ -41,7 +42,8 @@ class App extends Component{
             <Route path='/NewtonRaphso' element={<NewtonRaphson1/>}/>
             <Route path ='/Secant' element= {<Secant1/>}/>
             <Route path='/Napussorn' element={<Napussorn/>}/>
-            <Route panth='/GuassElimination' element={<GaussElimination/>}/>
+            <Route path='/CramerRule' element={<Cramer/>}/>
+            <Route path='/GuassElimination' element = {<GaussElimination/>}/>
            
           </Routes>
           </BrowserRouter>

@@ -21,14 +21,14 @@ export const NavBar = () => {
                             <Dropdown.Item href="/OnePointIteration">One-Point</Dropdown.Item>
                             <Dropdown.Item href="/NewtonRaphso">Newton-Raphson</Dropdown.Item>
                             <Dropdown.Item href="/Secant">Secant</Dropdown.Item>
-                            {/* <Dropdown.Item href="/Napussorn">Napussorn</Dropdown.Item> */}
+                            <Dropdown.Item href="/Napussorn">Napussorn</Dropdown.Item>
                         </Dropdown.Menu>
                     </Dropdown>
 
                     <Dropdown>
                         <Dropdown.Toggle variant="dark" id="nav-dropdown-dark">Linear Algebraic Equatuions</Dropdown.Toggle>
                         <Dropdown.Menu>
-                            <Dropdown.Item href="/Cramer's-Rule">Cramer's Rule</Dropdown.Item>
+                            <Dropdown.Item href="/CramerRule">Cramer's Rule</Dropdown.Item>
                             <Dropdown.Item href="/GuassElimination">Guass Elimination</Dropdown.Item>
                             <Dropdown.Item href="/Guass-Jordan">Guass Jordan</Dropdown.Item>
                             <Dropdown.Item href="/Matrix-Inversion">Matrix Inversion</Dropdown.Item>
